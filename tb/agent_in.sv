@@ -22,7 +22,7 @@ class agent_in extends uvm_agent;
 
     virtual function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
-        mon.item_ref_port.connect(item_ref_port);
+        mon.item_collected_port.connect(item_ref_port);
         drv.seq_item_port.connect(sqr.seq_item_export);
     endfunction
 endclass: agent_in

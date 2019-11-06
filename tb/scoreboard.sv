@@ -2,7 +2,7 @@ class scoreboard extends uvm_scoreboard;
 
   typedef tr_out T;
   typedef uvm_in_order_class_comparator #(T) comp_type;
-  uvm_tlm_analysis_fifo #(packet) to_refmod;
+  // uvm_tlm_analysis_fifo #(packet) to_refmod;
 
   //typedef uvm_in_order_comparator #(T,uvm_class_comp#(comp_policy),uvm_class_converter#(T),uvm_class_pair #(T)) comp_type;
   refmod rfm;
@@ -17,7 +17,7 @@ class scoreboard extends uvm_scoreboard;
     super.new(name, parent);
     ap_comp = new("ap_comp", this);
     ap_rfm = new("ap_rfm", this);
-    to_refmod = new("to_refmod", this);
+    // to_refmod = new("to_refmod", this);
   endfunction : new
 
   virtual function void build_phase(uvm_phase phase);

@@ -1,7 +1,7 @@
+package my_pkg;
+
 import uvm_pkg::*;
 `include "uvm_macros.svh"
-`include "./input_if.sv"
-`include "./output_if.sv"
 `include "./tr_in.sv"
 `include "./tr_out.sv"
 `include "./sequence_in.sv"
@@ -12,6 +12,9 @@ import uvm_pkg::*;
 `include "./agent_in.sv"
 `include "./agent_out.sv"
 `include "./refmod.sv"
+`include "./coverage.sv"
 `include "./scoreboard.sv"
 `include "./env.sv"
 `include "./simple_test.sv"
+
+endpackage

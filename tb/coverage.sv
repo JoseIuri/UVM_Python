@@ -1,15 +1,15 @@
 `uvm_analysis_imp_decl(_req)
 `uvm_analysis_imp_decl(_resp)
 
-class cover extends uvm_component;
+class coverage extends uvm_component;
 
-  `uvm_component_utils(cover)
+  `uvm_component_utils(coverage)
 
   tr_in req;
   tr_out resp;
 
-  uvm_analysis_imp_req#(tr_in, cover) req_port;
-  uvm_analysis_imp_resp#(tr_out, cover) resp_port;
+  uvm_analysis_imp_req#(tr_in, coverage) req_port;
+  uvm_analysis_imp_resp#(tr_out, coverage) resp_port;
 
   int min_cover;
   int min_transa = 5000;
@@ -65,4 +65,4 @@ class cover extends uvm_component;
     end
 
   endfunction: write_resp
-endclass : cover
+endclass : coverage
