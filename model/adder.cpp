@@ -4,7 +4,7 @@
 extern "C" int adder(int a, int b){
     Py_Initialize();
     PyObject* sysPath = PySys_GetObject((char*) "path");
-    PyList_Append(sysPath, PyUnicode_DecodeFSDefault("."));
+    PyList_Append(sysPath, PyUnicode_DecodeFSDefault("../model/"));
 
     PyObject *pModule = NULL, *pFunc = NULL, *pArgs = NULL, *pValue = NULL;
 
